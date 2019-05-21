@@ -198,6 +198,18 @@ class AppleMessage implements MessageInterface
         $this->apsBody["aps"]["badge"] = (int) $badge;
     }
 
+
+    /**
+     * iOS-specific
+     * Sets the APS Title
+     *
+     * @param string $title The title to display
+     */
+    public function setTitle($title)
+    {
+        $this->apsBody["aps"]["title"] = $title;
+    }
+
     /**
      * iOS-specific
      * Sets the APS content available flag, used to transform the notification into remote-notification
